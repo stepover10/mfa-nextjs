@@ -1,0 +1,31 @@
+{
+  "name": "microfrontends-turbo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:main": "turbo run dev --filter=main...",
+    "dev:docs": "turbo run dev --filter=docs...",
+    "start": "turbo run start",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "lint": "turbo run lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "next": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.16",
+    "prettier": "^2.8.8",
+    "turbo": "latest",
+    "react": "latest",
+    "eslint": "^8.11.0"
+  },
+  "packageManager": "pnpm@7.14.3"
+}
